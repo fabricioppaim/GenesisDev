@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenesisDev - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <i class="fas fa-project-diagram"></i> GenesisDev
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Documentação</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Sistema GenesisDev - Projeto Aplicado XP Educação</p>
+    </footer>
+</body>
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Ordenação
+  const sortSelect = document.querySelector('.sort-options select');
+  sortSelect.addEventListener('change', function() {
+    // Implemente a lógica de ordenação aqui
+    console.log('Ordenar por:', this.value);
+  });
+  
+  // Pesquisa
+  const searchInput = document.querySelector('.search-box input');
+  searchInput.addEventListener('input', function() {
+    // Implemente a lógica de filtro aqui
+    console.log('Pesquisar:', this.value);
+  });
+});
+</script>

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.name }}{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="project-header">
+            <h1><i class="fas fa-project-diagram"></i> {{ project.name }}</h1>
+            <div class="project-actions">
+                <a href="#" class="btn"><i class="fas fa-pencil-alt"></i> Editar</a>
+                <a href="{{ project.repo_url }}" target="_blank" class="btn btn-repo">
+                    <i class="fab fa-git-alt"></i> Repositório
+                </a>
+            </div>
+        </div>
+        
+        <p class="project-description">{{ project.description }}</p>
+        
+        <div class="project-details">
+            <div class="detail-item">
+                <span class="detail-label">Versão Atual:</span>
+                <span class="detail-value">{{ project.version }}</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Última Atualização:</span>
+                <span class="detail-value">20/07/2025</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sections">
+        <section class="card">
+            <h2><i class="fas fa-server"></i> Ambientes</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ambiente</th>
+                            <th>Versão</th>
+                            <th>Último Deploy</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for env in project.environments %}
+                        <tr>
+                            <td>{{ env.name }}</td>
+                            <td>{{ env.version }}</td>
+                            <td>{{ env.last_deploy }}</td>
+                            <td><span class="status-badge status-active">Ativo</span></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-book"></i> Documentação</h2>
+            <ul class="documentation-list">
+                {% for doc in project.documentation %}
+                <li>
+                    <i class="fas fa-file-pdf"></i>
+                    <div class="doc-info">
+                        <strong>{{ doc.title }}</strong>
+                        <div class="doc-meta">
+                            <span>Versão {{ doc.version }}</span>
+                            <span>Atualizado em {{ doc.last_update }}</span>
+                        </div>
+                    </div>
+                    <a href="#" class="doc-download"><i class="fas fa-download"></i></a>
+                </li>
+                {% endfor %}
+            </ul>
+            <a href="#" class="btn btn-secondary">
+                <i class="fas fa-plus"></i> Adicionar Documento
+            </a>
+        </section>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-tasks"></i> Requisitos</h2>
+        <div class="requirements-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+            </div>
+            <div class="progress-labels">
+                <span>75% completos</span>
+                <span>3 de 4 requisitos</span>
+            </div>
+        </div>
+        
+        <ul class="requirements-list">
+            {% for req in project.requirements %}
+            <li class="requirement-item requirement-{{ req.status|lower }}">
+                <i class="fas 
+                    {% if req.status == 'Implementado' %}fa-check-circle 
+                    {% elif req.status == 'Em teste' %}fa-hourglass-half 
+                    {% else %}fa-circle{% endif %}"></i>
+                <span class="req-id">{{ req.id }}</span>
+                <span class="req-title">{{ req.title }}</span>
+                <span class="req-status">{{ req.status }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
