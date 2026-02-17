@@ -1,0 +1,2674 @@
+{
+	"Empresa": [
+		{
+			"Id": "1",
+			"Name": "Fecomercio",
+			"Domain": "fecomercio-rs.gov.br",
+			"Ativo": false
+		},
+		{
+			"Id": "2",
+			"Name": "Senac",
+			"Domain": "senacrs.com.br",
+			"Ativo": true
+		},
+		{
+			"Id": "3",
+			"Name": "Sesc",
+			"Domain": "sesc-rs.com.br",
+			"Ativo": true
+		}
+	],
+	"Ambiente": [
+		{
+			"Id": "1",
+			"Name": "Producao",
+			"Sufixo": "PRD",
+			"Ativo": false
+		},
+		{
+			"Id": "2",
+			"Name": "Homologacao",
+			"Sufixo": "HLG",
+			"Ativo": true
+		},
+		{
+			"Id": "3",
+			"Name": "Teste",
+			"Sufixo": "TST",
+			"Ativo": true
+		},
+		{
+			"Id": "4",
+			"Name": "Desenvolvimento",
+			"Sufixo": "DEV",
+			"Ativo": true
+		}
+	],
+	"BancoDeDados": [
+		{
+			"Id": "1",
+			"Name": "ORACLE-D1",
+			"ServiceName": "pdb_d1.sescrs.br",
+			"Engine": "Oracle",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "gx_producaosesc",
+					"UserIdJenkis": "dev-gx_producaosesc-d1"
+				},
+				{
+					"Id": "2",
+					"Name": "gx_lgpd",
+					"UserIdJenkis": "gx_lgpd"
+				}
+			]
+		},
+		{
+			"Id": "2",
+			"Name": "SQLPRDGERAIS",
+			"ServiceName": "-",
+			"Engine": "Sql Server",
+			"AmbienteId": [
+				"1"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "PortalCliente",
+					"UserIdJenkis": "Trusted_Connection"
+				},
+				{
+					"Id": "2",
+					"Name": "GAM",
+					"UserIdJenkis": "Trusted_Connection"
+				},
+				{
+					"Id": "3",
+					"Name": "ASPState",
+					"UserIdJenkis": "Trusted_Connection"
+				},
+				{
+					"Id": "4",
+					"Name": "MeuSescRS",
+					"UserIdJenkis": "Trusted_Connection"
+				},
+				{
+					"Id": "5",
+					"Name": "SESC_SISTEMALGPD",
+					"UserIdJenkis": "Trusted_Connection"
+				},
+				{
+					"Id": "6",
+					"Name": "DeploysJenkinsNETFramework",
+					"UserIdJenkis": "Trusted_Connection"
+				}
+			]
+		},
+		{
+			"Id": "3",
+			"Name": "SQLPRDDEFAULT",
+			"ServiceName": "-",
+			"Engine": "Sql Server",
+			"AmbienteId": [
+				"1"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "GVDASA_GVCOLLEGE",
+					"UserIdJenkis": "usrgvcollege"
+				},
+				{
+					"Id": "2",
+					"Name": "GVDASA_CONTABILIDADE",
+					"UserIdJenkis": "usrgvcontabilidade"
+				}
+			]
+		},
+		{
+			"Id": "4",
+			"Name": "SQLDEV-DESENVOLVIMENTO",
+			"ServiceName": "-",
+			"Engine": "Sql Server",
+			"AmbienteId": [
+				"3",
+				"4"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "DeploysJenkinsNETFramework",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "2",
+					"Name": "DeploysJenkinsNETCore8",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "3",
+					"Name": "GAM",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "4",
+					"Name": "PortalCliente",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "5",
+					"Name": "MeuSescRS_TST",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "6",
+					"Name": "PortalCliente_TST",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "7",
+					"Name": "GAM_DEV_GENEXUS18",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "8",
+					"Name": "ASPState",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "9",
+					"Name": "SESC_SISTEMALGPD",
+					"UserIdJenkis": "adminDesenv"
+				}
+			]
+		},
+		{
+			"Id": "5",
+			"Name": "SQLDEV-HOMOLOGACAO",
+			"ServiceName": "-",
+			"Engine": "Sql Server",
+			"AmbienteId": [
+				"3",
+				"2"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "HLG-DeploysJenkinsNETFramework",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "2",
+					"Name": "HLG-DeploysJenkinsNETCore8",
+					"UserIdJenkis": "adminDesenv"
+				},
+				{
+					"Id": "3",
+					"Name": "MeuSescRS_HLG",
+					"UserIdJenkis": "adminHomlog"
+				}
+			]
+		},
+		{
+			"Id": "6",
+			"Name": "ORACLE-D1",
+			"ServiceName": "pdb_d1.sescrs.br",
+			"Engine": "Oracle",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "GX_PRODUCAOSESC",
+					"UserIdJenkis": "dev-gx_producaosesc-d1"
+				}
+			]
+		},
+		{
+			"Id": "7",
+			"Name": "ORACLE-W1",
+			"ServiceName": "pdb_w1.sescrs.br",
+			"Engine": "Oracle",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "GX_PRODUCAOSESC",
+					"UserIdJenkis": "dev-gx_producaosesc-w1"
+				},
+				{
+					"Id": "2",
+					"Name": "GX_PRODUCAOSESC2",
+					"UserIdJenkis": "dev-gx_producaosesc-w12"
+				}
+			]
+		},
+		{
+			"Id": "9",
+			"Name": "ORACLE-HML",
+			"ServiceName": "pdb_hml.sescrs.br",
+			"Engine": "Oracle",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "GX_PRODUCAOSESC",
+					"UserIdJenkis": "dev-gx_producaosesc-hml"
+				},
+				{
+					"Id": "2",
+					"Name": "GX_SENACNET_DEV",
+					"UserIdJenkis": "dev-gx_senacnet-hml"
+				},
+				{
+					"Id": "3",
+					"Name": "GX_PRODUCAOSESC_TST",
+					"UserIdJenkis": "dev-gx_producaosesc-tst"
+				},
+				{
+					"Id": "4",
+					"Name": "RM",
+					"UserIdJenkis": "dev-rm"
+				},
+				{
+					"Id": "5",
+					"Name": "GX_SENACNET_PRD_DEV",
+					"UserIdJenkis": "dev-gx_senacnet-prd-dev"
+				}
+			]
+		},
+		{
+			"Id": "10",
+			"Name": "ORACLE-PRD",
+			"ServiceName": "prd.sescrs.br",
+			"Engine": "Oracle",
+			"AmbienteId": [
+				"1"
+			],
+			"BancoDados": [
+				{
+					"Id": "1",
+					"Name": "GX_PRODUCAOSESC",
+					"UserIdJenkis": "prd-gx_producaosesc"
+				},
+				{
+					"Id": "2",
+					"Name": "GX_SENACNET",
+					"UserIdJenkis": "gx_senacnet"
+				}
+			]
+		}
+	],
+	"Web": [
+		{
+			"Name": "UPLAND",
+			"Path": "E:",
+			"Shared": "WebApps",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"Finalidade": "IIS"
+		},
+		{
+			"Name": "PARADISE",
+			"Path": "E:",
+			"Shared": "WebApps",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"Finalidade": "IIS"
+		},
+		{
+			"Name": "DORRIS",
+			"Path": "null",
+			"Shared": "null",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			],
+			"Finalidade": "Proxy"
+		},
+		{
+			"Name": "AMSTERDA",
+			"Path": "E:",
+			"Shared": "WebApps",
+			"AmbienteId": [
+				"1"
+			],
+			"Finalidade": "IIS"
+		},
+		{
+			"Name": "REDLANDS",
+			"Path": "E:",
+			"Shared": "WebApps",
+			"AmbienteId": [
+				"1"
+			],
+			"Finalidade": "IIS"
+		}
+	],
+	"Projetos": [
+		{
+			"Name": "SescNet-Desenvolvimento-18U13",
+			"version": "18U13",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Desenvolvimento",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "40197f68-9197-46e8-8e44-5380ce4fd930",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "9",
+					"DbId": "2",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "OracleFolha"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdev",
+					"SiteAppBindingPrimario": "sescnet-desenvolvimento",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "customErrors",
+									"AppendElement": "system.web",
+									"params": [
+										"mode,Off"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					],
+					"DirectoryVirtual": [
+						{
+							"key": "uploads",
+							"value": "\\\\sescnet.br\\environments\\Developer\\sescnet"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescNet-Sandbox",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Data099",
+			"ArquivosComplementares": "SescNet",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"BaseGAM": true,
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "9",
+					"DbId": "3",
+					"AmbienteId": "3",
+					"UserIdJenkis": "dev-gx_producaosesc-tst"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "sescnet-sandbox",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionState": "SQLServer",
+					"SiteAppSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescNet-Fixa",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Data099",
+			"ArquivosComplementares": "SescNet",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"BaseGAM": true,
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "9",
+					"DbId": "3",
+					"AmbienteId": "3",
+					"UserIdJenkis": "dev-gx_producaosesc-tst"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "sescnet-fixa",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionState": "SQLServer",
+					"SiteAppSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SenacNet-Desenvolvimento",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Desenvolvimento",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "40197f68-9197-46e8-8e44-5380ce4fd930",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "9",
+					"DbId": "2",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "OracleFolha"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdev",
+					"SiteAppBindingPrimario": "senacnet-desenvolvimento",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "customErrors",
+									"AppendElement": "system.web",
+									"params": [
+										"mode,Off"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"requestValidationMode,2.0",
+										"targetFramework,4.6.2",
+										"requestPathInvalidCharacters,",
+										"maxRequestLength,512000",
+										"executionTimeout,3600"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					],
+					"DirectoryVirtual": [
+						{
+							"key": "uploads",
+							"value": "\\\\senacrs.br\\environments\\Developer\\SenacNet"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SenacNet-Producao-Dev",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Desenvolvimento",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "40197f68-9197-46e8-8e44-5380ce4fd930",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "9",
+					"DbId": "5",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "OracleFolha"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdev",
+					"SiteAppBindingPrimario": "senacnet-prd-dev",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "customErrors",
+									"AppendElement": "system.web",
+									"params": [
+										"mode,Off"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					],
+					"DirectoryVirtual": [
+						{
+							"key": "uploads",
+							"value": "\\\\senacrs.br\\environments\\Developer\\Senacnet-prd-dev"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescNet-Desenvolvimento",
+			"version": "18U13",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Desenvolvimento",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "2c691f4896b34d31b42c8691afdf45b0",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "7",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "OracleFolha"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "5",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "sescnet-desenvolvimento",
+					"SiteAppBindingSecundario": "apisescnet-desenvolvimento",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"timeout,60",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "customErrors",
+									"AppendElement": "system.web",
+									"params": [
+										"mode,Off"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"maxRequestLength,20480"
+									]
+								}
+							]
+						}
+					],
+					"DirectoryVirtual": [
+						{
+							"key": "uploads",
+							"value": "\\\\sescrs.br\\environments\\Developer\\SescNet"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescNet-DevOps",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Desenvolvimento",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "2c691f4896b34d31b42c8691afdf45b0",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "7",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "3",
+					"AmbienteId": "3",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "OracleFolha"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "sescnet-devops",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					],
+					"DirectoryVirtual": [
+						{
+							"key": "uploads",
+							"value": "\\\\sescrs.br\\environments\\Developer\\SescNet\\"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescNet-Staging",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "Staging",
+			"TargetPath": "Data109",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "2c691f4896b34d31b42c8691afdf45b0",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "7",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "9",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "OracleFolha"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "5",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "sescnet-staging",
+					"SiteAppBindingSecundario": "apisescnet-staging",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "customErrors",
+									"AppendElement": "system.web",
+									"params": [
+										"mode,Off"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"maxRequestLength,20480"
+									]
+								}
+							]
+						}
+					],
+					"DirectoryVirtual": [
+						{
+							"key": "uploads",
+							"value": "\\\\sescrs.br\\environments\\Developer\\SescNet"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SenacNet-Producao",
+			"version": "18U9",
+			"ServerKBAlias": "SescNet",
+			"KbVersion": "SescNet",
+			"TargetPath": "SescNet",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "d439d9ca-e725-4ad1-9bd4-1e9a242c5c4f",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "10",
+					"DbId": "2",
+					"AmbienteId": "1",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "2",
+					"DbId": "2",
+					"AmbienteId": "1",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "5",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriissenacnet",
+					"SiteAppBindingPrimario": "senacnet",
+					"SiteAppBindingSecundario": "apisenacnet",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateServerId": "2",
+					"SiteAppSessionStateDBId": "3",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "PortalCliente-Develop",
+			"version": "18U9",
+			"ServerKBAlias": "PortalCliente",
+			"KbVersion": "Develop",
+			"TargetPath": "Data037",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "6",
+					"AmbienteId": "3",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "ecommerce-develop",
+					"SiteAppBindingSecundario": "portalcliente-develop",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"maxRequestLength,20480"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "PortalCliente-Desenvolvimento",
+			"version": "18U9",
+			"ServerKBAlias": "PortalCliente",
+			"KbVersion": "Desenvolvimento",
+			"TargetPath": "Data057",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "6",
+					"AmbienteId": "3",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "ecommerce-desenvolvimento",
+					"SiteAppBindingSecundario": "portalcliente-desenvolvimento",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"maxRequestLength,20480"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "PortalCliente-Staging",
+			"version": "18U9",
+			"ServerKBAlias": "PortalCliente",
+			"KbVersion": "Staging",
+			"TargetPath": "Data051",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "6",
+					"AmbienteId": "3",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "ecommerce-staging",
+					"SiteAppBindingSecundario": "portalcliente-staging",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"maxRequestLength,20480"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "PortalCliente-LayoutResponsivo",
+			"version": "18U9",
+			"ServerKBAlias": "PortalCliente",
+			"KbVersion": "LayoutResponsivo",
+			"TargetPath": "LayoutResponsivo",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "4",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "6",
+					"AmbienteId": "3",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "ecommerce-layoutresponsivo",
+					"SiteAppBindingSecundario": "portalcliente-layoutresponsivo",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "PortalCliente-Producao",
+			"version": "18U9",
+			"ServerKBAlias": "PortalCliente",
+			"KbVersion": "PortalCliente",
+			"TargetPath": "PortalCliente",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "2",
+					"DbId": "1",
+					"AmbienteId": "1",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "sescrs-usriisecommerce",
+					"SiteAppBindingPrimario": "ecommerce",
+					"SiteAppBindingSecundario": "portalcliente",
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "2",
+					"SiteAppSessionStateDBId": "3",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								},
+								{
+									"Name": "httpRuntime",
+									"AppendElement": "system.web",
+									"params": [
+										"maxRequestLength,20480"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "PatSesc-Develop",
+			"version": "18U9",
+			"ServerKBAlias": "PatSesc",
+			"KbVersion": "Develop",
+			"TargetPath": "Data025",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "7",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "patrimonio",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescPresencas-Develop",
+			"version": "18U9",
+			"ServerKBAlias": "SescPresencas",
+			"KbVersion": "Develop",
+			"TargetPath": "Develop",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": true,
+					"AndroidSDKDirectory": "E:\\Genexus\\AndroidSDK",
+					"JDKDirectory": "C:\\Program Files\\Java\\jdk-17",
+					"CompilationMode": "Development",
+					"AndroidExecutionType": "Emulator or Device"
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "7",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "presencas",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "SescPresencas-Prod",
+			"version": "18U9",
+			"ServerKBAlias": "SescPresencas",
+			"KbVersion": "SescPresencas",
+			"TargetPath": "NETFramework",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": true,
+					"AndroidSDKDirectory": "E:\\Genexus\\AndroidSDK",
+					"JDKDirectory": "C:\\Program Files\\Java\\jdk-17",
+					"CompilationMode": "Development",
+					"AndroidExecutionType": "Emulator or Device"
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "10",
+					"DbId": "1",
+					"AmbienteId": "1",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriispresencas",
+					"SiteAppBindingPrimario": "presencas",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "2",
+					"SiteAppSessionStateDBId": "3",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "MeuSescRS-Develop",
+			"version": "18U14",
+			"ServerKBAlias": "MeuSescRS",
+			"KbVersion": "Develop",
+			"TargetPath": "Data025",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false,
+					"ApplicationID": "",
+					"RepositoryID": ""
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": true,
+					"AndroidSDKDirectory": "E:\\Genexus\\AndroidSDK",
+					"JDKDirectory": "C:\\Program Files\\Java\\jdk-17",
+					"CompilationMode": "Development",
+					"AndroidExecutionType": "Emulator or Device"
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": true,
+					"RequiredXcodeVersion": "15.0",
+					"iOSDeploymentTarget": "12.0",
+					"AppleExecutionType": "Simulator (Mac)",
+					"MacHost": "NTI213602",
+					"MacUserIDJenkins": "iddesenvolvimentosesc"
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "5",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "meusescrs-develop",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},		
+		{
+			"Name": "MeuSescRS-Producao",
+			"version": "18U14",
+			"ServerKBAlias": "MeuSescRS",
+			"KbVersion": "MeuSescRS",
+			"TargetPath": "Data016",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "ee9fae8f-71b6-4878-9185-c3cd2bed1359",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": true,
+					"AndroidSDKDirectory": "E:\\Genexus\\AndroidSDK",
+					"JDKDirectory": "C:\\Program Files\\Java\\jdk-17",
+					"CompilationMode": "Distribution",
+					"KeyStoreFile": "E:\\Genexus\\18\\Models\\MeuSescRS-Producao\\MeuSescRS-MeuSescRS\\Data016\\mobile\\Android\\SescRS\\meusescrs.keystore",
+					"KeyAlias": "meusescrs",
+					"StorePassword": "sescrs.meusescrs",
+					"KeyPassword": "sescrs.meusescrs",
+					"AndroidExecutionType": "Emulator or Device"
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": true,
+					"RequiredXcodeVersion": "15.0",
+					"iOSDeploymentTarget": "12.0",
+					"AppleExecutionType": "Simulator (Mac)",
+					"MacHost": "NTI213602",
+					"MacUserIDJenkins": "iddesenvolvimentosesc"
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "2",
+					"DbId": "4",
+					"AmbienteId": "1",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "2",
+					"DbId": "2",
+					"AmbienteId": "1",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "5",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriismeusescrs",
+					"SiteAppBindingPrimario": "meusescrs",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "2",
+					"SiteAppSessionStateDBId": "3",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "GAM-Producao",
+			"version": "18U9",
+			"ServerKBAlias": "GAM",
+			"KbVersion": "GAM",
+			"TargetPath": "GAM_Deploy",
+			"ArquivosComplementares": "",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"Https": true,
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "8b83bb96-25a5-4e4d-aa1b-78e247b6cf41",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "2",
+					"DbId": "2",
+					"AmbienteId": "1",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "2",
+					"DbId": "2",
+					"AmbienteId": "1",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisgam",
+					"SiteAppBindingPrimario": "gam",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "2",
+					"SiteAppSessionStateDBId": "3",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "Sesc_LGPD-Producao",
+			"version": "17",
+			"ServerKBAlias": "Sesc_LGPD",
+			"KbVersion": "Sesc_LGPD",
+			"TargetPath": "Producao",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "4add4626-1390-4c9d-9377-8053881f69e7",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "2",
+					"DbId": "5",
+					"AmbienteId": "1",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "2",
+					"DbId": "2",
+					"AmbienteId": "1",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "sesc-prd-usriislgpd",
+					"SiteAppBindingPrimario": "sistemalgpd",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "2",
+					"SiteAppSessionStateDBId": "3",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "Sesc_LGPD-Develop",
+			"version": "17",
+			"ServerKBAlias": "Sesc_LGPD",
+			"KbVersion": "Develop",
+			"TargetPath": "Data014",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "4add4626-1390-4c9d-9377-8053881f69e7",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "9",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "sistemalgpd-develop",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "GAM-Develop",
+			"version": "18U9",
+			"ServerKBAlias": "GAM",
+			"KbVersion": "Develop",
+			"TargetPath": "Develop",
+			"ArquivosComplementares": "",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"Https": true,
+			"GAM": [
+				{
+					"Ativo": true,
+					"ApplicationID": "8b83bb96-25a5-4e4d-aa1b-78e247b6cf41",
+					"RepositoryID": "71ca3bf3-f71c-44e3-9458-393da9c301d7"
+				}
+			],
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				},
+				{
+					"ServerId": "4",
+					"DbId": "7",
+					"AmbienteId": "4",
+					"DataStore": "GAM"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "gam-develop",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "DeploysJenkinsNETFramework-Develop",
+			"version": "18U9",
+			"ServerKBAlias": "DeploysJenkinsNETFramework",
+			"KbVersion": "Develop",
+			"TargetPath": "NETFrameworkSQLServer1012",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "DeploysJenkinsNETFramework-develop",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "DeploysJenkinsNETFramework-Producao",
+			"version": "18U9",
+			"ServerKBAlias": "DeploysJenkinsNETFramework",
+			"KbVersion": "DeploysJenkinsNETFramework",
+			"TargetPath": "NETFrameworkSQLServer002",
+			"ExcludeFiles": "*.config *.cs *.rsp *.006 *.bld *.info *.ora",
+			"DirectoryConfigMsBuild": "\\ConfigXML\\GenexusPS.msbuild",
+			"GAM": [
+				{
+					"Ativo": false
+				}
+			],
+			"Https": true,
+			"MobileAndroid": [
+				{
+					"Ativo": false
+				}
+			],
+			"MobileIOS": [
+				{
+					"Ativo": false
+				}
+			],
+			"DataBases": [
+				{
+					"ServerId": "4",
+					"DbId": "1",
+					"AmbienteId": "4",
+					"DataStore": "Default"
+				}
+			],
+			"IIS": [
+				{
+					"AppPool32bits": "false",
+					"AppPoolIdentity": "ApplicationPoolIdentity",
+					"AppPoolWorkProcess": "2",
+					"AppPoolNetClrVersion": "v4.0",
+					"AppPoolManagedPipelineMode": "Integrated",
+					"AppPoolStartMode": "AlwaysRunning",
+					"AppPoolRecyclingTime": "0.06:00:00",
+					"AppPoolUserIdentity": "usriisdesen",
+					"SiteAppBindingPrimario": "DeploysJenkinsNETFramework-producao",
+					"SiteAppBindingSecundario": null,
+					"SiteAppConnectionTimeOut": "00:03:00",
+					"SiteAppSessionStateType": "SQLServer",
+					"SiteAppStateServerSessionStateConnection": "tcpip=loopback:42424",
+					"SiteAppSessionStateNetworkTimeOutSegInt": "20",
+					"SiteAppSessionStateServerId": "4",
+					"SiteAppSessionStateDBId": "8",
+					"WebConfig": [
+						{
+							"Elements": [
+								{
+									"Name": "sessionState",
+									"AppendElement": "system.web",
+									"params": [
+										"allowCustomSqlDatabase,true",
+										"mode,SQLServer",
+										"sqlConnectionString,Server=DataBaseNameSQLServer;Database=DataBaseName;Application Name=AppName;Trusted_Connection=True"
+									]
+								},
+								{
+									"Name": "serviceHostingEnvironment",
+									"AppendElement": "system.serviceModel",
+									"params": [
+										"aspNetCompatibilityEnabled,true",
+										"multipleSiteBindingsEnabled,true"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"GAM": [
+		{
+			"UserIDGamAdmin": "dev-sescadmin",
+			"UserIDGamConnection": "dev-sescconnection",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			]
+		},
+		{
+			"UserIDGamAdmin": "sescadmin",
+			"UserIDGamConnection": "sescconnection",
+			"AmbienteId": [
+				"1"
+			]
+		}
+	],
+	"LogGenexus": [
+		{
+			"ConversionPattern": "<conversionPattern value='timestamp::%d{ISO8601} - [GXLOG] - processorid::[%t] - loglevel::%p - class::%c - message::%m - stacktrace::%stacktrace{15} - appname::%property{log4net:UserName}% - clientip::%aspnet-request{HTTP_X_FORWARDED_FOR} - coockie::%aspnet-request{HTTP_COOKIE} - exception::%exception%n'/>",
+			"AmbienteId": [
+				"2",
+				"3",
+				"4"
+			]
+		},
+		{
+			"ConversionPattern": "<conversionPattern value='timestamp::%d{ISO8601} - [GXLOG] - processorid::[%t] - loglevel::%p - class::%c - message::%m - stacktrace::%stacktrace{15} - appname::%property{log4net:UserName}% - clientip::%aspnet-request{HTTP_X_FORWARDED_FOR} - coockie::%aspnet-request{HTTP_COOKIE} - exception::%exception%n'/>",
+			"AmbienteId": [
+				"1"
+			]
+		}
+	],
+	"Genexus": [
+		{
+			"GxServerUrl": "http://gxserver/GeneXusServer17/",
+			"GxServerVersion": "17",
+			"GxServerWorkingDirectory": "E:\\Genexus\\17",
+			"GXServerWorkingDirectoryKB": "\\models"
+		},
+		{
+			"GxServerUrl": "http://gxserver/GeneXusServer18/",
+			"GxServerVersion": "18U13",
+			"GxServerWorkingDirectory": "E:\\Genexus\\18U13",
+			"GXServerWorkingDirectoryKB": "\\models"
+		},
+		{
+			"GxServerUrl": "http://gxserver/GeneXusServer18/",
+			"GxServerVersion": "18U14",
+			"GxServerWorkingDirectory": "E:\\Genexus\\18U14",
+			"GXServerWorkingDirectoryKB": "\\models"
+		},
+		{
+			"GxServerUrl": "http://gxserver/GeneXusServer18/",
+			"GxServerVersion": "18U9",
+			"GxServerWorkingDirectory": "E:\\Genexus\\18U9",
+			"GXServerWorkingDirectoryKB": "\\models"
+		},
+		{
+			"GxServerUrl": "http://gxserver/GeneXusServer18/",
+			"GxServerVersion": "18",
+			"GxServerWorkingDirectory": "E:\\Genexus\\18",
+			"GXServerWorkingDirectoryKB": "\\models"
+		}
+	],
+	"Credenciais": [
+		{
+			"Name": "GenexusLogin",
+			"Id": "GenexusLogin"
+		}
+	]
+}
